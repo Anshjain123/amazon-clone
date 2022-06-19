@@ -43,7 +43,7 @@ const CheckoutProduct = (props) => {
                     }
 
                 </div>
-                <button onClick={removeitem}>Remove from Cart</button>
+                <button className='checkoutproduct__button' onClick={removeitem}>Remove from Cart</button>
             </div>
         </div>
     )

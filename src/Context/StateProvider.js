@@ -22,7 +22,11 @@ const StateProvider = (props) => {
                 ...state,
                 basket:newBasket
             }
-            
+        } else if(action.type === "set_user"){
+            return {
+                ...state, 
+                user:action.user
+            }
         }
     }
     // Selector 

@@ -43,7 +43,7 @@ const Product = ({ id, title, image, price, rating }) => {
         </div>
       </div>
       <img src={image} />
-      <button onClick={handleaddtocart}>Add to Cart</button>
+      <button className = "product__button" onClick={handleaddtocart}>Add to Cart</button>
     </div>
   )
 }

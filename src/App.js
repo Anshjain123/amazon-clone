@@ -12,15 +12,36 @@ import Checkout from "./Components/Checkout";
 import { useEffect, useContext } from "react";
 import StateContext from "./Context/StateContext";
 import Login from "./Components/Login";
-function App() {
+import SignUp from "./Components/SignUp";
+import { onAuthStateChanged } from "firebase/auth";
+import { auth } from "./Components/firebase";
 
+
+function App() {
+  const {state, dispatch} = useContext(StateContext);
+  useEffect(()=>{
+    onAuthStateChanged(auth, (user)=>{
+      if(user){
+        dispatch({
+          type:"set_user",
+          user:user
+        }) 
+      } else {
+        dispatch({
+          type:"set_user",
+          user:null
+        })
+      }
+    })
+  },[])
+  console.log(state); 
   return (
     <>
-        
         <Routes>
-          <Route exact path="/" element={<><Header/><Home /></>} />
-          <Route exact path="checkout" element={<><Header/><Checkout /></>} />
-          <Route exact path="login" element={<Login />} />
+          {state.user && <Route exact path="/" element={<><Header/><Home /></>} />}
+          {state.user && <Route exact path="checkout" element={<><Header/><Checkout /></>} />}
+          {!state.user && <Route exact path="login" element={<Login />} />}
+          {!state.user && <Route exact path="signup" element={<SignUp />} />}
         </Routes>
       
     </>

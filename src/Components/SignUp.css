@@ -1,0 +1,121 @@
+.signup__logo {
+  cursor: pointer;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  object-fit: contain;
+  width: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.signup {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+.signup__container {
+  width: 350px;
+  height: auto;
+  border: 1px solid #ddd;
+}
+.inner__signup__container {
+  width: 320px;
+  height: auto;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.header__signup {
+  width: 100%;
+  height: 37px;
+  padding-bottom: 2px;
+  font-weight: 600;
+  font-size: 25px;
+}
+.label__signup {
+  font-weight: 650;
+  margin-bottom: 5px;
+  margin-top: 15px;
+  font-size: 13px;
+}
+.signup__input {
+  height: 27px;
+  padding: 3px 7px;
+  line-height: normal;
+  border: 1px solid #a6a6a6;
+  border-top-color: #949494;
+  border-radius: 3px;
+  outline: 0;
+}
+.signup__input:focus {
+  border-color: #e77600;
+  box-shadow: 0 0 3px 2px rgb(228 121 17 / 50%);
+}
+.signup__continue__button {
+  border-radius: 2px;
+  cursor: pointer;
+  height: 32px;
+  margin-top: 12px;
+  border: 1px solid;
+  border-color: #a88734 #9c7e31 #846a29;
+  background: linear-gradient(to bottom, #f7dfa5, #f0c14b);
+}
+.signup__continue__button:hover {
+  background: #f0c14b;
+}
+.signup__continue__button:focus {
+  border-color: #e77600;
+  box-shadow: 0 0 3px 2px rgb(228 121 17 / 50%);
+}
+.signup_terms_and_conditions {
+  font-size: 12px;
+  margin-top: 15px;
+  font-weight: 400;
+}
+.signup__divider {
+  color: #767676;
+  text-align: center;
+  margin-bottom: 14px;
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+}
+.signup__divider > h5 {
+  font-weight: 700;
+}
+.signup__divider::after {
+  content: "";
+  width: 320px;
+  background-color: transparent;
+  display: block;
+  height: 1px;
+  border-top: 1px solid #e7e7e7;
+  position: relative;
+  margin-top: -15px;
+  z-index: -1;
+}
+.account__creation__button {
+  background: linear-gradient(to bottom, #f7f8fa, #e7e9ec);
+  border-radius: 3px;
+  border-color: #adb1b8 !important;
+  border: 1px solid;
+  cursor: pointer;
+  padding: 0;
+  height: 37px;
+  text-align: center;
+}
+.account__creation__button:hover {
+  background: #e8e8e8;
+}
+.account__creation__button:focus {
+  border-color: #e77600;
+  box-shadow: 0 0 3px 2px rgb(228 121 17 / 50%);
+}
+.signup__form {
+  display: flex;
+  flex-direction: column;
+}
+.signup__name{
+    display: flex;
+}
