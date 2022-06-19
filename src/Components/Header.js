@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext, useEffect, useLayoutEffect } from 'react'
 import './Header.css'
 import StateContext from '../Context/StateContext';
 import SearchIcon from '@mui/icons-material/Search';
@@ -8,6 +8,7 @@ import { useNavigate } from 'react-router-dom';
 const Header = () => {
     const navigate = useNavigate();
     const { state } = useContext(StateContext);
+   
     return (
         <div className="header">
             <img className='header__logo' onClick={() => navigate("/")} src="http://pngimg.com/uploads/amazon/amazon_PNG11.png" />
@@ -20,10 +21,10 @@ const Header = () => {
             </div>
             <div className="header__nav">
                 <div className="header__option">
-                    <span className='header__optionLineOne'>
+                    <span className='header__optionLineOne' onClick={()=>navigate("/login")}>
                         Hello Guest
                     </span>
-                    <span className='header__optionLineTwo'>
+                    <span className='header__optionLineTwo' onClick={()=>navigate("/login")}>
                         Sign In
                     </span>
                 </div>

@@ -42,10 +42,12 @@
 }
 .header__optionLineOne{
     font-size: 12px;
+    cursor: pointer;
 }
 .header__optionLineTwo{
     font-size: 15;
     font-weight: bold;
+    cursor: pointer;
 }
 .header__nav{
     display: flex;

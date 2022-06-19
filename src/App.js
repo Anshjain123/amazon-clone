@@ -11,14 +11,16 @@ import Checkout from "./Components/Checkout";
 
 import { useEffect, useContext } from "react";
 import StateContext from "./Context/StateContext";
+import Login from "./Components/Login";
 function App() {
 
   return (
     <>
-        <Header />
+        
         <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route exact path="checkout" element={<Checkout />} />
+          <Route exact path="/" element={<><Header/><Home /></>} />
+          <Route exact path="checkout" element={<><Header/><Checkout /></>} />
+          <Route exact path="login" element={<Login />} />
         </Routes>
       
     </>
