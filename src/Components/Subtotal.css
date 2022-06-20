@@ -1,24 +1,31 @@
-.subtotal{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 300px;
-    height: 100px;
-    padding: 20px;
-    background-color: #f3f3f3;
-    border-color: 1px solid #dddddd;
-    border-radius: 3px;  
+.subtotal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 300px;
+  height: 100px;
+  padding: 20px;
+  background-color: #f3f3f3;
+  border-color: 1px solid #dddddd;
+  border-radius: 3px;
 }
-.subtotal__gift{
-    display: flex;
-    align-items: center;
+.subtotal__gift {
+  display: flex;
+  align-items: center;
 }
-.subtotal__button{
-    cursor: pointer;
-    width: 100%;
-    height: 30px;
-    margin-top: 10px;
-    border: 1px solid #a99734;
-    background-color:#f0c14b;
-    color: black;
+.subtotal__button {
+  cursor: pointer;
+  width: 100%;
+  height: 30px;
+  margin-top: 10px;
+  border: 1px solid #a99734;
+  background-color: #f0c14b;
+  color: black;
+}
+.subtotal__button:hover {
+  background: #e4b235;
+}
+.subtotal__button:focus {
+  border-color: #e77600;
+  box-shadow: 0 0 3px 2px rgb(228 121 17 / 50%);
 }

@@ -15,6 +15,7 @@ import Login from "./Components/Login";
 import SignUp from "./Components/SignUp";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "./Components/firebase";
+import Payment from "./Components/Payment";
 
 
 function App() {
@@ -40,6 +41,7 @@ function App() {
         <Routes>
           {state.user && <Route exact path="/" element={<><Header/><Home /></>} />}
           {state.user && <Route exact path="checkout" element={<><Header/><Checkout /></>} />}
+          {state.user && <Route exact path="payment" element={<><Header/><Payment /></>} />}
           {!state.user && <Route exact path="login" element={<Login />} />}
           {!state.user && <Route exact path="signup" element={<SignUp />} />}
         </Routes>

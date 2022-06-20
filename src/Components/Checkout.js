@@ -3,6 +3,9 @@ import './Checkout.css'
 import StateContext from '../Context/StateContext'
 import CheckoutProduct from './CheckoutProduct'
 import Subtotal from './Subtotal'
+import FlipMove from 'react-flip-move';
+
+
 const Checkout = () => {
     const { state } = useContext(StateContext);
     return (
@@ -17,9 +20,12 @@ const Checkout = () => {
                     <h2 className="checkout__title">
                         Your Shopping Basket
                     </h2>
-                    {state.basket.map((item, index)=>{
-                        return <div key={index}> <CheckoutProduct item = {item}/> </div>
-                    })}
+                    <FlipMove>
+                        {state.basket.map((item, index) => {
+                            return <div key={index}> <CheckoutProduct item={item} /> </div>
+                        })}
+                    </FlipMove>
+
                 </div>
             </div>
 

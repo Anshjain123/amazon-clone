@@ -1,9 +1,13 @@
 import React from 'react'
 import './Home.css'
 import Product from './Product'
+import { Carousel } from 'react-bootstrap'
 
 const Home = () => {
+    const slides = [
 
+
+    ]
     return (
         <div className="home">
             <div className="home__container">
@@ -11,6 +15,13 @@ const Home = () => {
                     className='home__image'
                     src="https://wallpaperaccess.com/full/6385958.jpg"
                 />
+
+                {/* 
+                    
+                    <img
+                        className='home__image'
+                        src="https://imageio.forbes.com/specials-images/imageserve/626bc95c6e06ae8411874a2d/India-Amazon/960x0.jpg?format=jpg&width=960"
+                    /> */}
                 <div className="home__row">
                     <Product
                         id="12321341"
